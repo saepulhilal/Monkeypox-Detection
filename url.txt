@@ -1,0 +1,2 @@
+dataset : https://www.kaggle.com/datasets/nafin59/monkeypox-skin-lesion-dataset
+deploy : https://huggingface.co/spaces/saepulhilal/gc7
