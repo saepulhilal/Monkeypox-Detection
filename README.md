@@ -2,31 +2,31 @@
 
 ---
 
-## Tujuan
+## Objective
 
-Program ini dibuat untuk mendeteksi penyakit monkeypox. Input pada program ini berupa gambar, gambar tersebut akan di prediksi dengan deep learning untuk mengetahui hasil dari gambar tersebut adalah terkena monkeypox atau bukan.
-
----
-
-## Kesimpualan
-1. **Jumlah Data:** Terdapat total 2142 data train dan 420 data validasi untuk pelatihan model.
-
-2. **Arsitektur Model:**
-   - Menggunakan model Sequential dengan base EfficientNetV2B0.
-   - Total parameter model sebanyak 38,109,553, dengan 32,190,241 parameter yang dapat di-train.
-   - Dilakukan beberapa lapisan Dense dengan dropout untuk menghindari overfitting.
-
-3. **Pelatihan Model:**
-   - Model dilatih selama 30 epoch.
-   - Hasil dari Training pada data validasi mendapatkan akurasi sebesar 0.6905 dan untuk loss sebesar 0.6921
-
-4. **Hasil Evaluasi:**
-   - Setelah pelatihan, model berhasil mencapai akurasi validasi sebesar 80%.
-   - Hasil evaluasi pada data uji menunjukkan bahwa model memiliki performa baik dalam mendeteksi Monkeypox (precision 58%, recall 90%) namun kurang baik dalam mendeteksi kategori lain (precision 86%, recall 48%).
-   - Akurasi keseluruhan pada data uji adalah 67%, dengan nilai f1-score sebesar 0.66.
-
-Model berhasil mencapai akurasi yang baik pada data validasi, terutama dalam mengenali Monkeypox. Namun, masih diperlukan perbaikan khususnya dalam meningkatkan recall untuk kategori lainnya agar hasil evaluasi lebih seimbang. Rekomendasi penggunaan format penyimpanan model yang lebih baru juga perlu dipertimbangkan.
+This program was created to detect monkeypox. The input for this program is an image, which will be analyzed using deep learning to determine whether the image shows a case of monkeypox or not.
 
 ---
 
-Untuk hasil deployment dapa dilihat pada [HuggingFace](https://huggingface.co/spaces/saepulhilal/gc7)
+## Conclusions
+1. **Data Volume:** There are a total of 2,142 training data and 420 validation data for model training.
+
+2. **Model Architecture:**
+   - Uses a Sequential model with an EfficientNetV2B0 base.
+   - The model has a total of 38,109,553 parameters, with 32,190,241 trainable parameters.
+   - Several Dense layers with dropout were used to prevent overfitting.
+
+3. **Model Training:**
+   - The model was trained for 30 epochs.
+   - The results of training on the validation data achieved an accuracy of 0.6905 and a loss of 0.6921.
+
+4. **Evaluation Results:**
+   - After training, the model achieved a validation accuracy of 80%.
+   - Evaluation results on the test data showed that the model performed well in detecting Monkeypox (precision 58%, recall 90%) but less well in detecting other categories (precision 86%, recall 48%).
+   - The overall accuracy on the test data is 67%, with an F1-score of 0.66.
+
+The model achieved good accuracy on the validation data, particularly in recognizing Monkeypox. However, improvements are still needed, especially in enhancing recall for other categories to achieve a more balanced evaluation result. Consideration should also be given to using a newer model storage format.
+
+---
+
+The deployment results can be viewed at [HuggingFace](https://huggingface.co/spaces/saepulhilal/gc7)
